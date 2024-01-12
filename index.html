@@ -14,12 +14,12 @@
     </div>
 
     <div class="contenedor_formulario">
-        <form>
+        <form action = "assets/php/enviar_formulario.php" method = "post">
 
             <label for = "nombre">Nombre y Apellido</label>
             <input type = "text" id = "nombre" name = "nombre" placeholder = "Nombre y Apellido" required><br><br>
           
-            <label for = "alias">Correo electrónico</label>
+            <label for = "alias">Alias</label>
             <input type = "text" id = "alias" name = "alias" placeholder = "Alias" pattern = "^(?=.*[a-zA-Z])(?=.*\d).{6,}$"
             title = "Debe contener al menos 6 caracteres, incluyendo letras y números." required><br><br>
           
@@ -30,9 +30,7 @@
             <input type = "email" id = "email" name = "email" placeholder = "Email" required><br><br>
     
             <label for = "region">Región</label>
-            <select id = "region" name = "region">
-                <option value = "region_1">region_1</option>
-            </select><br><br>
+            <select id = "region" name = "region"></select><br><br>
     
             <label for = "comuna">Comuna</label>
             <select id = "comuna" name = "comuna">
@@ -58,9 +56,10 @@
                 <input type = "checkbox" id = "amigo" name = "opcion" value = "amigo">
                 <label for = "amigo">Amigo</label><br><br>
             </div>
-            <input type = "submit" value = "Votar">
+            <input type = "submit" name = "enviar_formulario" value = "Votar">
         </form>
     </div>
     <script src = "assets/js/comprobacion_rut.js"></script>
+    <script src = "assets/js/obtener_regiones.js"></script>
 </body>
 </html>
